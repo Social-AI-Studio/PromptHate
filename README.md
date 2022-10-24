@@ -20,16 +20,21 @@ In order to run the code, you need to pre-process data in the following step:
 2. generate captions over each cleaned image.
 3. extract entity and demographic information for each cleaned image.
 
-**Image Cleaning**:
+**Image Cleaning**: This step removes the meme texts of images. We follow the implementation provided in the [project](https://github.com/HimariO/HatefulMemesChallenge), which use OCR detection tools to detect texts of image first, remove and impaint the image.
 
-**Caption Generation**:
+**Caption Generation**: We leverage a pre-trained [image caption generation tool](https://github.com/rmokady/CLIP_prefix_caption). To run the code, you need to download the pre-trained models provided by the project and execute codes in `captions-for-hatefulmeme.ipynb`. Noted, generated captions over cleaned and uncleaned images are obviously different. Specifically, we use the caption generator pre-trained on Conceptual Caption and generate captions over cleaned images.
 
-**Entity and Demographic Information Extraction**:
+**Entity and Demographic Information Extraction**: We use Google Vision for entity detection and FairFace detection for demographic information extraction. More details can be found in the [project](https://github.com/HimariO/HatefulMemesChallenge).
 
 We also provide the pre-processed data in the `data/domain_splits` and `caption` folders.
 
 ## Run PromptHate
-Our code is built on [transformers](https://github.com/huggingface/transformers) and we use its `3.4.0` version.
+Our code is built on [transformers](https://github.com/huggingface/transformers) and we use its `4.19.2` version and PyTorch using CUDA version 10.2 (compatiable with other versions of transformers, pytorch and CUDA, but may results in unexpected errors). It takes up 19 GB dedicated memory for PromptHate training.
+
+To replicate the reported performance, you can simply run:
+```bash
+bash run.sh
+```
 
 ## Citation
 
