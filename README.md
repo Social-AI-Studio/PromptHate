@@ -4,7 +4,7 @@ This is the implementation of the paper Prompting for Multimodal Hateful Meme Cl
 
 ## Overview
 
-![](imgs/prompthate.pdf)
+![](imgs/prompthate.JPG)
 
 
 
