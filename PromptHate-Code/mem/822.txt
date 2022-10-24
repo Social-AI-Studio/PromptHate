@@ -1,0 +1,87 @@
+DATASET : mem
+FEW_SHOT : False
+FINE_GRIND : False
+NUM_SHOTS : 16
+MODEL : pbm
+UNIMODAL : False
+DATA : /Data_Storage/Rui_Data_Space/textual/hate-speech
+CAPTION_PATH : /Data_Storage/Rui_Code_Space/NLP/textual/hate-speech/clip-kb/CLIP_prefix_caption
+RESULT : ./result
+FEAT_DIM : 2048
+CLIP_DIM : 512
+BERT_DIM : 768
+ROBERTA_DIM : 1024
+NUM_FOLD : 5
+EMB_DIM : 300
+NUM_LABELS : 2
+POS_WORD : good
+NEG_WORD : bad
+DEM_SAMP : False
+SIM_RATE : 0.5
+IMG_RATE : 0.5
+TEXT_RATE : 0.5
+CLIP_CLEAN : False
+MULTI_QUERY : True
+NUM_QUERIES : 4
+EMB_DROPOUT : 0.0
+FC_DROPOUT : 0.4
+WEIGHT_DECAY : 0.01
+LR_RATE : 1.3e-05
+EPS : 1e-08
+BATCH_SIZE : 16
+FIX_LAYERS : 2
+MID_DIM : 512
+NUM_HIDDEN : 512
+LENGTH : 64
+TOTAL_LENGTH : 256
+PREFIX_LENGTH : 10
+NUM_SAMPLE : 1
+NUM_LAYER : 8
+MODEL_NAME : roberta-large
+PRETRAIN_DATA : conceptual
+IMG_VERSION : clean
+MAPPING_TYPE : transformer
+ADD_ENT : True
+ADD_DEM : True
+DEBUG : False
+SAVE : False
+SAVE_NUM : 822
+EPOCHS : 10
+SEED : 1112
+CUDA_DEVICE : 11
+WARM_UP : 2000
+TRANS_LAYER : 1
+NUM_HEAD : 8
+Length of training set: 8500, length of testing set: 500
+Epoch 0
+	train_loss: 947.07, accuracy: 63.22
+	evaluation auc: 65.75, accuracy: 62.40
+Epoch 1
+	train_loss: 567.68, accuracy: 74.49
+	evaluation auc: 69.52, accuracy: 58.00
+Epoch 2
+	train_loss: 493.91, accuracy: 78.75
+	evaluation auc: 75.76, accuracy: 68.40
+Epoch 3
+	train_loss: 390.47, accuracy: 84.24
+	evaluation auc: 79.32, accuracy: 72.00
+Epoch 4
+	train_loss: 308.72, accuracy: 88.29
+	evaluation auc: 79.10, accuracy: 68.00
+Epoch 5
+	train_loss: 225.93, accuracy: 91.46
+	evaluation auc: 79.79, accuracy: 71.60
+Epoch 6
+	train_loss: 167.13, accuracy: 94.18
+	evaluation auc: 81.40, accuracy: 72.80
+Epoch 7
+	train_loss: 104.44, accuracy: 96.46
+	evaluation auc: 81.50, accuracy: 71.40
+Epoch 8
+	train_loss: 59.88, accuracy: 98.18
+	evaluation auc: 80.91, accuracy: 71.40
+Epoch 9
+	train_loss: 47.34, accuracy: 98.53
+	evaluation auc: 81.30, accuracy: 72.60
+Maximum epoch: 6
+	evaluation auc: 81.40, accuracy: 72.80

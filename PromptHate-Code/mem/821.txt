@@ -1,0 +1,87 @@
+DATASET : mem
+FEW_SHOT : False
+FINE_GRIND : False
+NUM_SHOTS : 16
+MODEL : pbm
+UNIMODAL : False
+DATA : /Data_Storage/Rui_Data_Space/textual/hate-speech
+CAPTION_PATH : /Data_Storage/Rui_Code_Space/NLP/textual/hate-speech/clip-kb/CLIP_prefix_caption
+RESULT : ./result
+FEAT_DIM : 2048
+CLIP_DIM : 512
+BERT_DIM : 768
+ROBERTA_DIM : 1024
+NUM_FOLD : 5
+EMB_DIM : 300
+NUM_LABELS : 2
+POS_WORD : good
+NEG_WORD : bad
+DEM_SAMP : False
+SIM_RATE : 0.5
+IMG_RATE : 0.5
+TEXT_RATE : 0.5
+CLIP_CLEAN : False
+MULTI_QUERY : True
+NUM_QUERIES : 4
+EMB_DROPOUT : 0.0
+FC_DROPOUT : 0.4
+WEIGHT_DECAY : 0.01
+LR_RATE : 1.3e-05
+EPS : 1e-08
+BATCH_SIZE : 16
+FIX_LAYERS : 2
+MID_DIM : 512
+NUM_HIDDEN : 512
+LENGTH : 64
+TOTAL_LENGTH : 256
+PREFIX_LENGTH : 10
+NUM_SAMPLE : 1
+NUM_LAYER : 8
+MODEL_NAME : roberta-large
+PRETRAIN_DATA : conceptual
+IMG_VERSION : clean
+MAPPING_TYPE : transformer
+ADD_ENT : True
+ADD_DEM : True
+DEBUG : False
+SAVE : False
+SAVE_NUM : 821
+EPOCHS : 10
+SEED : 1111
+CUDA_DEVICE : 11
+WARM_UP : 2000
+TRANS_LAYER : 1
+NUM_HEAD : 8
+Length of training set: 8500, length of testing set: 500
+Epoch 0
+	train_loss: 932.05, accuracy: 64.82
+	evaluation auc: 67.64, accuracy: 59.00
+Epoch 1
+	train_loss: 529.89, accuracy: 77.06
+	evaluation auc: 76.16, accuracy: 64.40
+Epoch 2
+	train_loss: 411.39, accuracy: 83.65
+	evaluation auc: 75.63, accuracy: 61.80
+Epoch 3
+	train_loss: 306.49, accuracy: 88.60
+	evaluation auc: 80.47, accuracy: 72.60
+Epoch 4
+	train_loss: 207.22, accuracy: 92.74
+	evaluation auc: 81.92, accuracy: 72.20
+Epoch 5
+	train_loss: 130.42, accuracy: 95.44
+	evaluation auc: 80.95, accuracy: 66.60
+Epoch 6
+	train_loss: 74.72, accuracy: 97.58
+	evaluation auc: 81.39, accuracy: 68.80
+Epoch 7
+	train_loss: 47.25, accuracy: 98.34
+	evaluation auc: 81.68, accuracy: 73.20
+Epoch 8
+	train_loss: 27.33, accuracy: 99.12
+	evaluation auc: 81.77, accuracy: 71.20
+Epoch 9
+	train_loss: 16.97, accuracy: 99.51
+	evaluation auc: 82.13, accuracy: 72.00
+Maximum epoch: 7
+	evaluation auc: 81.68, accuracy: 73.20

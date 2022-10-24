@@ -1,0 +1,87 @@
+DATASET : mem
+FEW_SHOT : False
+FINE_GRIND : False
+NUM_SHOTS : 16
+MODEL : pbm
+UNIMODAL : False
+DATA : /Data_Storage/Rui_Data_Space/textual/hate-speech
+CAPTION_PATH : /Data_Storage/Rui_Code_Space/NLP/textual/hate-speech/clip-kb/CLIP_prefix_caption
+RESULT : ./result
+FEAT_DIM : 2048
+CLIP_DIM : 512
+BERT_DIM : 768
+ROBERTA_DIM : 1024
+NUM_FOLD : 5
+EMB_DIM : 300
+NUM_LABELS : 2
+POS_WORD : good
+NEG_WORD : bad
+DEM_SAMP : False
+SIM_RATE : 0.5
+IMG_RATE : 0.5
+TEXT_RATE : 0.5
+CLIP_CLEAN : False
+MULTI_QUERY : True
+NUM_QUERIES : 4
+EMB_DROPOUT : 0.0
+FC_DROPOUT : 0.4
+WEIGHT_DECAY : 0.01
+LR_RATE : 1.3e-05
+EPS : 1e-08
+BATCH_SIZE : 16
+FIX_LAYERS : 2
+MID_DIM : 512
+NUM_HIDDEN : 512
+LENGTH : 64
+TOTAL_LENGTH : 256
+PREFIX_LENGTH : 10
+NUM_SAMPLE : 1
+NUM_LAYER : 8
+MODEL_NAME : roberta-large
+PRETRAIN_DATA : conceptual
+IMG_VERSION : clean
+MAPPING_TYPE : transformer
+ADD_ENT : True
+ADD_DEM : True
+DEBUG : False
+SAVE : False
+SAVE_NUM : 830
+EPOCHS : 10
+SEED : 1120
+CUDA_DEVICE : 2
+WARM_UP : 2000
+TRANS_LAYER : 1
+NUM_HEAD : 8
+Length of training set: 8500, length of testing set: 500
+Epoch 0
+	train_loss: 910.30, accuracy: 66.61
+	evaluation auc: 69.02, accuracy: 62.40
+Epoch 1
+	train_loss: 500.59, accuracy: 78.95
+	evaluation auc: 75.07, accuracy: 64.20
+Epoch 2
+	train_loss: 395.38, accuracy: 84.33
+	evaluation auc: 80.52, accuracy: 62.80
+Epoch 3
+	train_loss: 284.37, accuracy: 89.60
+	evaluation auc: 81.17, accuracy: 71.80
+Epoch 4
+	train_loss: 192.34, accuracy: 93.21
+	evaluation auc: 81.16, accuracy: 71.00
+Epoch 5
+	train_loss: 123.80, accuracy: 95.73
+	evaluation auc: 81.93, accuracy: 68.00
+Epoch 6
+	train_loss: 71.64, accuracy: 97.53
+	evaluation auc: 80.52, accuracy: 69.20
+Epoch 7
+	train_loss: 41.48, accuracy: 98.67
+	evaluation auc: 80.95, accuracy: 69.40
+Epoch 8
+	train_loss: 25.29, accuracy: 99.15
+	evaluation auc: 81.01, accuracy: 68.80
+Epoch 9
+	train_loss: 15.57, accuracy: 99.54
+	evaluation auc: 81.99, accuracy: 68.40
+Maximum epoch: 3
+	evaluation auc: 81.17, accuracy: 71.80
